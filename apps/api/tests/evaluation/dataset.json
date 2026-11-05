@@ -1,0 +1,57 @@
+{
+  "benchmark_name": "ReadFlow RAG Evaluation Benchmark v1.0",
+  "version": "1.0.0",
+  "description": "Standardized benchmark dataset for evaluating retrieval precision, recall, citation accuracy, and faithfulness.",
+  "items": [
+    {
+      "id": "eval-001",
+      "document_title": "Attention Is All You Need",
+      "synthetic_content": "The Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence-aligned RNNs or convolution. In this work we propose the Transformer model architecture based solely on attention mechanisms.",
+      "page_number": 1,
+      "query": "What architecture is the Transformer model based on?",
+      "expected_passage_keywords": ["self-attention", "without using sequence-aligned RNNs", "attention mechanisms"],
+      "expected_answer": "The Transformer architecture relies entirely on self-attention mechanisms without sequence-aligned RNNs or convolutions.",
+      "ground_truth_page": 1
+    },
+    {
+      "id": "eval-002",
+      "document_title": "Attention Is All You Need",
+      "synthetic_content": "Multi-Head Attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this. In our work we employ 8 parallel attention layers, or heads.",
+      "page_number": 3,
+      "query": "How many parallel attention layers or heads are used in the work?",
+      "expected_passage_keywords": ["Multi-Head Attention", "8 parallel attention layers", "heads"],
+      "expected_answer": "The model employs 8 parallel attention layers or heads.",
+      "ground_truth_page": 3
+    },
+    {
+      "id": "eval-003",
+      "document_title": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+      "synthetic_content": "Retrieval-Augmented Generation (RAG) models combine pre-trained parametric and non-parametric memory. The parametric memory is a pre-trained seq2seq model, while the non-parametric memory is a dense vector index of Wikipedia accessed with a neural retriever.",
+      "page_number": 2,
+      "query": "What constitutes the parametric and non-parametric memory in RAG?",
+      "expected_passage_keywords": ["parametric memory", "seq2seq model", "non-parametric memory", "dense vector index"],
+      "expected_answer": "Parametric memory is a pre-trained seq2seq model, whereas non-parametric memory is a dense vector index of Wikipedia.",
+      "ground_truth_page": 2
+    },
+    {
+      "id": "eval-004",
+      "document_title": "Retrieval-Augmented Generation for Knowledge-Intensive Tasks",
+      "synthetic_content": "We evaluate RAG on a wide range of knowledge-intensive tasks, including Open-Domain Question Answering (Natural Questions, TriviaQA, WebQuestions), abstractive question answering (MS-MARCO), and Jeopardy question generation.",
+      "page_number": 5,
+      "query": "Which open-domain question answering datasets were evaluated?",
+      "expected_passage_keywords": ["Natural Questions", "TriviaQA", "WebQuestions"],
+      "expected_answer": "The evaluated datasets were Natural Questions, TriviaQA, and WebQuestions.",
+      "ground_truth_page": 5
+    },
+    {
+      "id": "eval-005",
+      "document_title": "Non-Existent Query Document",
+      "synthetic_content": "This section describes compiler optimizations including loop unrolling, dead code elimination, and constant folding.",
+      "page_number": 4,
+      "query": "What is the capital of Mars in ancient history?",
+      "expected_passage_keywords": [],
+      "expected_answer": "I could not find information in the provided document(s) to answer your question.",
+      "ground_truth_page": null
+    }
+  ]
+}
